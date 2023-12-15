@@ -1,0 +1,28 @@
+#fname=input('Enter the File name:')
+#why quit isnt working properlyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy T.T. I am getting tracebacksssssssssssssssssssssssssssssssssss
+
+fname=input('Enter a file name:')
+
+try :
+    fhand=open(fname)
+except :
+    if fname=='na na boo boo' :
+        print('NA NA BOO BOO TO YOU - You have been punk''d!')
+        exit()
+
+    else:
+        print('File can not be open:')
+        exit()
+
+
+sum=0
+count=0
+for ly in fhand:
+    if ly.startswith('X-DSPAM-Confidence:'):
+        pos=ly.find (':')
+        num=float(ly[pos+1:])
+        sum=sum+num
+        count=count+1
+
+avg=sum/count
+print('Average Apm Confidence:', avg)
