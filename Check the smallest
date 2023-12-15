@@ -1,0 +1,8 @@
+number=[5,41,12,3,74,15]
+num=number[0]
+for the_num in number :
+
+  if the_num < num:
+    num=the_num
+  print(num,the_num)
+print('After', num)
