@@ -1,0 +1,3 @@
+saint='I dated long'
+for i in range(10):  #you can also use while loop just dont stare at tea cup, its not a divination class
+  print(saint)
